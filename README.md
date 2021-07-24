@@ -8,7 +8,7 @@ Laravel 8 project, include following functions:
 		- Admin/ Operation Manager -  Add products, Manage products
 		- Sales Manager - View sales
 
-The project uses:
+Packages use:
 - [Yajra Laravel Datatables](https://github.com/yajra/laravel-datatables "yajra / laravel-datatables")
 - [Spatie Laravel Permission](https://github.com/spatie/laravel-permission "spatie / laravel-permission")
 - [Intervention Image](http://image.intervention.io/ "Intervention Image")
@@ -26,6 +26,7 @@ The project uses:
 ## How to use
 
 Just clone this project into your desired project folder
+
 `git clone git@github.com:udaraz/laravel_cart.git`
 
 and follow the instructions below to set it up for local or production
@@ -34,22 +35,29 @@ and follow the instructions below to set it up for local or production
 
 - Install the dependencies
 
-`composer install`
+  `composer install`
 
-Setup .env file
+- Setup .env file
 
-
-    cp .env.example .env
-    #adjust database settings to use mysql
-    #save .env
-    #generate APP_KEY
-    php artisan key:generate
+      cp .env.example .env
+      #adjust database settings to use mysql
+      #save .env
+      #generate APP_KEY
+      php artisan key:generate
 
 - Run migrations + seeding
-`php artisan migrate --seed`
+  
+  `php artisan migrate`
+  
+  `php artisan db:seed`
 
+- Link Storage
+  
+  `php artisan storage:link`
+  
 - Run Project
-`php artisan serve`
+
+  `php artisan serve`
 
 Now access the application at http://localhost:8000.
 Use `admin@abc.com` and password `123456` to login (Use demo credentials to access other users)
