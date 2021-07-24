@@ -16,24 +16,40 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
+        //create admin
+        $role_admin = Role::create(['name' => 'Admin','guard_name'=>'admin']);
 
-        $role = Role::create(['name' => 'Admin','guard_name'=>'admin']);
-
-        $user = Admin::create([
+        $user_admin = Admin::create([
             'name' => 'admin',
             'email' => 'admin@abc.com',
             'password' => bcrypt('123456'),
             'remember_token' => Str::random(10),
         ]);
 
+        $user_admin->assignRole([$role_admin->id]);
 
-        $user->assignRole([$role->id]);
+        //create Operation Manager
+        $role_ope = Role::create(['name' => 'Operation Manager','guard_name'=>'admin']);
 
-        $role_list = [
-            ['name' => 'Operation Manager','guard_name'=>'admin'],
-            ['name' => 'Sales Manager','guard_name'=>'admin'],
-        ];
+        $user_ope = Admin::create([
+            'name' => 'operation',
+            'email' => 'operation@abc.com',
+            'password' => bcrypt('123456'),
+            'remember_token' => Str::random(10),
+        ]);
 
-        Role::insert($role_list);
+        $user_ope->assignRole([$role_ope->id]);
+
+        //create Sales Manager
+        $role_sales = Role::create(['name' => 'Sales Manager','guard_name'=>'admin']);
+
+        $user_sales = Admin::create([
+            'name' => 'sales',
+            'email' => 'sales@abc.com',
+            'password' => bcrypt('123456'),
+            'remember_token' => Str::random(10),
+        ]);
+
+        $user_sales->assignRole([$role_sales->id]);
     }
 }
