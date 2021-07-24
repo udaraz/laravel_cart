@@ -1,0 +1,57 @@
+.navbar-brand{
+    img {
+      width: auto;
+      height: 40px;
+    }
+}
+
+.btn-special{
+  //padding: 0.15rem 0.5rem;
+}
+
+.nav-btn{
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+}
+
+.nav-social {
+  .fa {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;
+    &:hover {
+      text-decoration: none;
+      color: #777f80;
+      border: 1px solid #777f80;
+    }
+  }
+}
+
+.nav-social{
+  margin-left: 15px;
+}
+
+.nav-mind-submit{
+  margin-right: 25px;
+}
